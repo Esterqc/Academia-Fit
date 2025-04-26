@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia Fit - Bem-vindo</title>
+  <link rel="stylesheet" href="../Css/tela.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+ 
+  <div class="user-avatar" onclick="window.location.href='login.html'">
+    <span id="userInitial">A</span> <!-- Aqui a inicial aparece -->
+  </div>
+  
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop class="bg-video">
+    <source src="../videos/5319093-uhd_3840_2160_25fps.mp4" type="video/mp4">
+  
+  </video>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Academia Fit</h1>
+        <p>Transforme seu corpo. Alcance seus objetivos.</p>
+        <div class="button-container">
+          <button onclick="window.location.href='cadastro.html'">Cadastre-se</button>
+          <button onclick="window.location.href='login.html'">Entrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sobre a academia -->
+  <section class="about">
+    <div class="container">
+      <h2>Sobre a Academia Fit</h2>
+      <p>Na Academia Fit, oferecemos equipamentos de última geração, uma variedade de aulas e planos flexíveis para atender todos os níveis de treino.</p>
+    </div>
+  </section>
+
+  <!-- Recursos -->
+  <section class="features">
+    <div class="container">
+      <h2>Explore a Academia Fit</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://img.freepik.com/premium-photo/fitness-plan-sports-trainer-amounts-workout-plan-close-up_118454-254.jpg" alt="Horários de Aulas">
+          <h3>Horários de Aulas</h3>
+          <p>Confira os horários das aulas e organize sua rotina.</p>
+          <button>Ver Horários</button>
+        </div>
+        <div class="card">
+          <img src="https://img.freepik.com/free-photo/care-male-healthy-weights-athletic_1139-695.jpg?ga=GA1.1.364066673.1745453023&semt=ais_hybrid&w=740" alt="Professores">
+          <h3>Professores</h3>
+          <p>Conheça nossos profissionais qualificados.</p>
+          <button>Conhecer Professores</button>
+        </div>
+        <div class="card">
+          <img src="../images/c5762b6f-33ea-4fb6-b9f8-00e4d0bb8f45.jpeg" alt="Planos">
+          <h3>Planos e Preços</h3>
+          <p>Escolha o plano que cabe no seu bolso.</p>
+          <button>Ver Planos</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planos -->
+  <section class="plans">
+    <div class="container">
+      <h2>Planos de Aulas</h2>
+      <div class="plans-container">
+        <div class="plan-card basic">
+          <i class="fas fa-dumbbell icon"></i>
+          <h3>Plano Básico</h3>
+          <p>Acesso a todas as aulas de grupo e uso dos equipamentos.</p>
+          <button>Assine Agora</button>
+        </div>
+        <div class="plan-card premium">
+          <i class="fas fa-running icon"></i>
+          <h3>Plano Premium</h3>
+          <p>Acesso ilimitado a todas as aulas, equipamentos e acompanhamento de personal trainer.</p>
+          <button>Assine Agora</button>
+        </div>
+        <div class="plan-card vip">
+          <i class="fas fa-crown icon"></i>
+          <h3>Plano VIP</h3>
+          <p>Benefícios exclusivos, aulas particulares e acesso a eventos especiais.</p>
+          <button>Assine Agora</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Rodapé -->
+<footer>
+  <p>&copy; 2025 Academia Fit | Todos os direitos reservados.</p>
+</footer>
+
+<!-- AQUI ENTRA O JAVASCRIPT -->
+<script>
+  const nomeUsuario = localStorage.getItem('nomeUsuario');
+  if (nomeUsuario) {
+    const primeiraLetra = nomeUsuario.charAt(0).toUpperCase();
+    document.getElementById('userInitial').textContent = primeiraLetra;
+  }
+</script>
+
+</body>
+</html>
