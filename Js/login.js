@@ -1,25 +1,24 @@
 function login() {
-    const emailLogin = document.getElementById('emailLogin').value;
-    const senhaLogin = document.getElementById('senhaLogin').value;
-  
-    // Pega o usuário cadastrado no localStorage
-    const usuarioCadastrado = JSON.parse(localStorage.getItem('usuario'));
-  
-    if (!usuarioCadastrado) {
-      alert('Nenhum usuário cadastrado!');
-      return;
-    }
-  
-    if (emailLogin === usuarioCadastrado.email && senhaLogin === usuarioCadastrado.senha) {
-      alert('Login realizado com sucesso!');
-      
-      // Salva no localStorage o nome do usuário
-      localStorage.setItem('nomeUsuario', usuarioCadastrado.nome);
-      
-      // Redireciona para a tela inicial
-      window.location.href = 'tela.html';
-    } else {
-      alert('Email ou senha incorretos!');
-    }
+  const email = document.getElementById('emailLogin').value;
+  const senha = document.getElementById('senhaLogin').value;
+
+  const dadosUsuario = localStorage.getItem(email);
+
+  if (!dadosUsuario) {
+    alert('Usuário não encontrado. Verifique o email ou cadastre-se.');
+    return;
   }
-  
+
+  const usuario = JSON.parse(dadosUsuario);
+
+  if (usuario.senha !== senha) {
+    alert('Senha incorreta!');
+    return;
+  }
+
+  // Salvar sessão do usuário logado
+  localStorage.setItem('usuarioLogado', email);
+
+  alert(`Bem-vindo, ${usuario.nome}!`);
+  window.location.href = 'tela.html';
+}

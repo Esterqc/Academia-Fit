@@ -1,64 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Planos - Academia Fit</title>
-  <link rel="stylesheet" href="../Css/planos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha seu Plano - Academia Fit</title>
+  <link rel="stylesheet" href="../Css/planos.css">
 </head>
 <body>
-  <header>
-    <h1>Conheça Nossos Planos</h1>
-    <p>Escolha o plano ideal para o seu estilo de vida</p>
-  </header>
 
-  <nav class="plano-nav">
-    <a href="#plano-basico">Plano Básico</a>
-    <a href="#plano-premium">Plano Premium</a>
-    <a href="#plano-vip">Plano VIP</a>
-  </nav>
+  <div class="planos-container">
+    <h1>Escolha seu Plano</h1>
 
-  <main class="planos-container">
-    <section id="plano-basico" class="plano">
-      <h2>Plano Básico</h2>
-      <p>Ideal para iniciantes que desejam acesso aos equipamentos e aulas em grupo.</p>
-      <ul>
-        <li>Acesso à academia de segunda a sábado</li>
-        <li>Aulas coletivas inclusas</li>
-        <li>Suporte técnico básico</li>
-      </ul>
-      <p class="preco">R$ 69,90/mês</p>
-      <a href="assinar.html?plano=basico" class="btn-assinar">Assinar</a>
-    </section>
+    <div class="planos">
+      <div class="plano" onclick="escolherPlano('Básico')">
+        <h2>Plano Básico</h2>
+        <p>R$ 59,90/mês</p>
+        <p>Aulas em grupo + Equipamentos</p>
+      </div>
 
-    <section id="plano-premium" class="plano">
-      <h2>Plano Premium</h2>
-      <p>Para quem quer mais liberdade e acompanhamento personalizado.</p>
-      <ul>
-        <li>Acesso completo todos os dias</li>
-        <li>Aulas ilimitadas</li>
-        <li>Acompanhamento de personal 1x por semana</li>
-      </ul>
-      <p class="preco">R$ 89,90/mês</p>
-      <a href="assinar.html?plano=premium" class="btn-assinar">Assinar</a>
-    </section>
+      <div class="plano" onclick="escolherPlano('Premium')">
+        <h2>Plano Premium</h2>
+        <p>R$ 89,90/mês</p>
+        <p>Aulas + Equipamentos + Personal Trainer</p>
+      </div>
 
-    <section id="plano-vip" class="plano">
-      <h2>Plano VIP</h2>
-      <p>Para quem busca exclusividade e experiência completa.</p>
-      <ul>
-        <li>Todos os benefícios do Premium</li>
-        <li>Aulas particulares</li>
-        <li>Convites para eventos exclusivos</li>
-      </ul>
-      <p class="preco">R$ 119,90/mês</p>
-      <a href="assinar.html?plano=vip" class="btn-assinar">Assinar</a>
-    </section>
-  </main>
+      <div class="plano" onclick="escolherPlano('VIP')">
+        <h2>Plano VIP</h2>
+        <p>R$ 190,90/mês</p>
+        <p>Tudo incluso + Eventos Exclusivos</p>
+      </div>
+    </div>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Academia Fit. Todos os direitos reservados.</p>
-  </footer>
+  <!-- JS deve vir após o HTML -->
+  <script src="../Js/planos.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,44 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .confirmacao-container {
+    background-color: #1c1c1c;
+    padding: 40px;
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 0 0 15px green;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  h2 {
+    color: limegreen;
+    margin-bottom: 20px;
+  }
+  
+  .btn-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn-voltar:hover {
+    background-color: #b30000;
+  }
+  

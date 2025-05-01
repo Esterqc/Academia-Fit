@@ -1,26 +1,27 @@
-function cadastrar() {
+document.getElementById('formCadastro').addEventListener('submit', function(e) {
+  e.preventDefault();
+
   const nome = document.getElementById('nome').value;
   const email = document.getElementById('email').value;
   const senha = document.getElementById('senha').value;
-  const confirmarSenha = document.getElementById('confirmarSenha').value;
-  const plano = document.getElementById('plano').value;
-  const horario = document.getElementById('horario').value;
-  const professor = document.getElementById('professor').value;
-  const aulaSemana = document.getElementById('aulaSemana').value;
 
-  if (!nome || !email || !senha || !confirmarSenha || !plano || !horario || !professor || !aulaSemana) {
-    alert('Preencha todos os campos!');
+  // Verifica se o e-mail já foi cadastrado
+  if (localStorage.getItem(email)) {
+    alert('E-mail já cadastrado. Faça login.');
     return;
   }
 
-  if (senha !== confirmarSenha) {
-    alert('As senhas não coincidem!');
-    return;
-  }
+  // Cria objeto com os dados do usuário
+  const usuario = {
+    nome,
+    email,
+    senha,
+    plano: null // ainda sem plano
+  };
 
-  const usuario = { nome, email, senha, plano, horario, professor, aulaSemana };
-  localStorage.setItem('usuario', JSON.stringify(usuario));
+  // Salva no localStorage com o e-mail como chave
+  localStorage.setItem(email, JSON.stringify(usuario));
 
   alert('Cadastro realizado com sucesso!');
   window.location.href = 'login.html';
-}
+});

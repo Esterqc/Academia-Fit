@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento - Academia Fit</title>
+  <link rel="stylesheet" href="../Css/pagamento.css" />
+</head>
+<body>
+
+  <div class="pagamento-container">
+    <h2>Pagamento do Plano</h2>
+    <p id="planoSelecionado">Plano escolhido:</p>
+    <p id="precoPlano">Valor:</p>
+
+    <label for="metodoPagamento">Escolha o método de pagamento:</label>
+    <select id="metodoPagamento" onchange="mostrarFormularioPagamento()">
+      <option value="cartao">Cartão de Crédito</option>
+      <option value="debito">Cartão de Débito</option>
+      <option value="pix">Pix</option>
+    </select>
+
+    <!-- Cartão de Crédito -->
+    <div id="formCartao" class="metodo">
+      <input type="text" placeholder="Nome no Cartão" />
+      <input type="text" placeholder="Número do Cartão" />
+      <input type="text" placeholder="Validade (MM/AA)" />
+      <input type="text" placeholder="CVV" />
+      <button onclick="confirmarPagamento()">Pagar com Cartão</button>
+    </div>
+
+    <!-- Cartão de Débito -->
+    <div id="formDebito" class="metodo" style="display:none;">
+      <input type="text" placeholder="Nome no Cartão" />
+      <input type="text" placeholder="Número do Cartão" />
+      <input type="text" placeholder="Validade (MM/AA)" />
+      <input type="text" placeholder="CVV" />
+      <button onclick="confirmarPagamento()">Pagar com Débito</button>
+    </div>
+
+    <!-- Pix -->
+    <div id="formPix" class="metodo" style="display:none;">
+      <p>Escaneie o QR Code com seu app de banco:</p>
+      <img src="../images/pix qr code.jpeg" alt="QR Code Pix" class="qr-code"/>
+      <p>Ou copie a chave Pix:</p>
+      <input type="text" readonly value="academiafit@pix.com" />
+      <button onclick="confirmarPagamento()">Confirmar Pagamento</button>
+    </div>
+  </div>
+
+  <script src="../Js/pagamento.js"></script>
+</body>
+</html>

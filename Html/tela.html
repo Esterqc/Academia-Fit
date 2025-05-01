@@ -15,6 +15,7 @@
 </head>
 <body>
 
+  <!-- Avatar do usuário -->
   <div class="user-avatar" onclick="window.location.href='login.html'">
     <span id="userInitial">A</span>
   </div>
@@ -68,34 +69,30 @@
           <h3>Planos e Preços</h3>
           <p>Escolha o plano que cabe no seu bolso.</p>
           <button onclick="window.location.href='planos.html'">Ver Planos</button>
-
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Planos -->
-  <section class="plans">
+  <!-- Modalidades -->
+  <section class="modalidades">
     <div class="container">
-      <h2 id="planos">Planos de Aulas</h2>
+      <h2 id="modalidades">Modalidades de Aulas</h2>
       <div class="plans-container">
-        <div class="plan-card basic" id="plano-basico">
+        <div class="plan-card basic">
           <i class="fas fa-dumbbell icon"></i>
-          <h3>Plano Básico</h3>
-          <p>Acesso a todas as aulas de grupo e uso dos equipamentos.</p>
-          <button>Assine Agora</button>
+          <h3>Musculação</h3>
+          <p>Treinos completos com equipamentos modernos para hipertrofia e resistência.</p>
         </div>
-        <div class="plan-card premium" id="plano-premium">
-          <i class="fas fa-running icon"></i>
-          <h3>Plano Premium</h3>
-          <p>Acesso ilimitado a todas as aulas, equipamentos e acompanhamento de personal trainer.</p>
-          <button>Assine Agora</button>
+        <div class="plan-card premium">
+          <i class="fas fa-person-running icon"></i>
+          <h3>Funcional</h3>
+          <p>Exercícios dinâmicos em grupo que melhoram força, agilidade e condicionamento.</p>
         </div>
-        <div class="plan-card vip" id="plano-vip">
-          <i class="fas fa-crown icon"></i>
-          <h3>Plano VIP</h3>
-          <p>Benefícios exclusivos, aulas particulares e acesso a eventos especiais.</p>
-          <button>Assine Agora</button>
+        <div class="plan-card vip">
+          <i class="fas fa-music icon"></i>
+          <h3>Dança</h3>
+          <p>Aula animada com coreografias ao som de ritmos latinos, ideal para queimar calorias com diversão.</p>
         </div>
       </div>
     </div>
@@ -106,14 +103,8 @@
     <p>&copy; 2025 Academia Fit | Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Script JS -->
-  <script>
-    const nomeUsuario = localStorage.getItem('nomeUsuario');
-    if (nomeUsuario) {
-      const primeiraLetra = nomeUsuario.charAt(0).toUpperCase();
-      document.getElementById('userInitial').textContent = primeiraLetra;
-    }
-  </script>
+  <!-- Script JavaScript externo -->
+  <script src="../Js/tela.js"></script>
 
 </body>
 </html>
